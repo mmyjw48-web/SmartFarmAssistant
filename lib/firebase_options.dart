@@ -41,7 +41,7 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBJWZcZxLLAE5G6-jVBNX4e_IIQGZKN9R0',
+    apiKey: 'YOUR_KEY',
     appId: '1:1091776145292:web:c071e83372adec169718a9',
     messagingSenderId: '1091776145292',
     projectId: 'smart-farm-app-123',
@@ -50,7 +50,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBc9IdLq3qZqpy61n_A_qB1yUvHobHInL8',
+    apiKey: 'YOUR_KEY',
     appId: '1:1091776145292:android:0f5a3ef1535bcea49718a9',
     messagingSenderId: '1091776145292',
     projectId: 'smart-farm-app-123',
@@ -58,7 +58,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDTgbali_yzSQ8vocuUB-PWxsM9H7xGFOs',
+    apiKey: 'YOUR_KEY',
     appId: '1:1091776145292:ios:0ee10d8ee227313a9718a9',
     messagingSenderId: '1091776145292',
     projectId: 'smart-farm-app-123',
@@ -68,7 +68,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDTgbali_yzSQ8vocuUB-PWxsM9H7xGFOs',
+    apiKey: 'YOUR_KEY',
     appId: '1:1091776145292:ios:0ee10d8ee227313a9718a9',
     messagingSenderId: '1091776145292',
     projectId: 'smart-farm-app-123',
@@ -78,7 +78,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBJWZcZxLLAE5G6-jVBNX4e_IIQGZKN9R0',
+    apiKey: 'YOUR_KEY',
     appId: '1:1091776145292:web:2b05fc60cf8202a79718a9',
     messagingSenderId: '1091776145292',
     projectId: 'smart-farm-app-123',
