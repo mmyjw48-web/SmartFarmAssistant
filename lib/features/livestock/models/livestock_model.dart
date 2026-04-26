@@ -138,7 +138,10 @@ class DiagnosisResult {
     return DiagnosisResult(
       possibleCondition: parsed['condition'] ?? 'Unable to determine',
       riskLevel: RiskLevel.fromString(parsed['risk'] ?? ''),
-      recommendedActions: List<String>.from(parsed['actions'] ?? []),
+      // recommendedActions: List<String>.from(parsed['actions'] ?? []),
+      recommendedActions: (parsed['actions'] is List)
+    ? List<String>.from(parsed['actions'])
+    : ['Consult a veterinarian for proper guidance.'],
       additionalInfo: parsed['info'],
     );
   }

@@ -50,7 +50,7 @@ class SoilTypeCard extends StatelessWidget {
               soil.label,
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 13,
+                fontSize: 10,
                 fontWeight: FontWeight.w600,
                 color:
                     isSelected ? AppColors.primary : AppColors.textPrimary,

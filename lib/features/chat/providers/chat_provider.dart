@@ -86,9 +86,11 @@ class ChatNotifier extends StateNotifier<ChatState> {
       );
     } catch (e) {
       // 5. Add error message as an AI bubble
+      // print("🔥 GEMINI Errrrrrrrrrrrrrrrrro : $e");
       final errorMsg = ChatMessage(
-        content: 'Sorry, I could not respond right now. '
-            'Please check your connection and try again.',
+        // content: 'Sorry, I could not respond right now. '
+        //     'Please check your connection and try again.',
+         content: 'Error: $e',
         role: MessageRole.ai,
         isError: true,
       );

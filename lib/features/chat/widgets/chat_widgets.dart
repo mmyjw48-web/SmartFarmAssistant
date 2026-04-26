@@ -3,10 +3,11 @@ import 'package:flutter/services.dart';
 import '../../../core/constants/app_colors.dart';
 import '../models/message_model.dart';
 import 'package:intl/intl.dart';
-
+import 'package:flutter_markdown/flutter_markdown.dart';
 // ─────────────────────────────────────────────────────────────────────────
 // Chat Bubble  (user right / AI left)
 // ─────────────────────────────────────────────────────────────────────────
+
 class ChatBubble extends StatelessWidget {
   final ChatMessage message;
 
@@ -15,6 +16,7 @@ class ChatBubble extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isUser = message.isUser;
+    
 
     return Padding(
       padding: EdgeInsets.only(
@@ -69,9 +71,12 @@ class ChatBubble extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: Text(
-                      message.content,
-                      style: TextStyle(
+                    child: MarkdownBody(
+                      
+                     data: message.content,
+                     styleSheet: MarkdownStyleSheet(
+
+                      p: TextStyle(
                         color: message.isError
                             ? AppColors.error
                             : isUser
@@ -80,6 +85,20 @@ class ChatBubble extends StatelessWidget {
                         fontSize: 14.5,
                         height: 1.5,
                       ),
+                      
+    //                   strong: TextStyle(
+    //   fontWeight: FontWeight.bold,
+    //   color: isUser
+    //       ? AppColors.userBubbleText
+    //       : AppColors.aiBubbleText,
+    // ),
+
+    // listBullet: TextStyle(r
+    //   color: isUser
+    //       ? AppColors.userBubbleText
+    //       : AppColors.aiBubbleText,
+
+                     ),
                     ),
                   ),
 

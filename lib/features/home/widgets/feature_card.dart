@@ -69,13 +69,13 @@ class FeatureCard extends StatelessWidget {
                 subtitle,
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
                       color: AppColors.textSecondary,
-                      height: 1.4,
+                      height: 1.0,
                     ),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
               ),
 
-              const SizedBox(height: 12),
+              const SizedBox(height: 10),
 
               // ── Arrow indicator ──────────────────────────────
               Row(
@@ -91,7 +91,7 @@ class FeatureCard extends StatelessWidget {
                     child: Icon(
                       Icons.arrow_forward_rounded,
                       color: color,
-                      size: 18,
+                      size: 20,
                     ),
                   ),
                 ],

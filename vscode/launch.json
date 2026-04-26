@@ -1,0 +1,39 @@
+
+// {
+//   "version": "0.2.0",
+//   "configurations": [
+//     {
+//       "name": "Flutter (API Key)",
+//       "request": "launch",
+//       "type": "dart",
+//       "program": "lib/main.dart",
+//       "args": [
+//         "--dart-define=GEMINI_API_KEY=%GEMINI_API_KEY%"
+//       ]
+//     }
+//   ]
+// }
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Smart Farm (Debug)",
+      "request": "launch",
+      "type": "dart",
+      "args": [
+                "--dart-define=GEMINI_API_KEY=%GEMINI_API_KEY%"
+
+      ]
+    },
+    {
+      "name": "Smart Farm (Release)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release",
+      "args": [
+                "--dart-define=GEMINI_API_KEY=%GEMINI_API_KEY%"
+
+      ]
+    }
+  ]
+}

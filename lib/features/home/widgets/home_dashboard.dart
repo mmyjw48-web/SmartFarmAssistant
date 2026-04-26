@@ -241,7 +241,8 @@ class HomeDashboard extends ConsumerWidget {
         crossAxisCount: 2,
         crossAxisSpacing: 16,
         mainAxisSpacing: 16,
-        childAspectRatio: 0.88,
+        // childAspectRatio: 0.88,
+        childAspectRatio: 0.83
       ),
       itemCount: features.length,
       itemBuilder: (context, i) => FeatureCard(

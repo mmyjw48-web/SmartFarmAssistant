@@ -8,18 +8,22 @@ import '../models/livestock_model.dart';
 import '../providers/livestock_provider.dart';
 
 class DiagnosisResultScreen extends ConsumerWidget {
-  final Map<String, dynamic> result;
+  // final Map<String, dynamic> result;
+  final DiagnosisResult result;
 
   const DiagnosisResultScreen({super.key, required this.result});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final condition = result['condition'] as String? ?? 'Unknown';
-    final riskStr  = result['risk'] as String? ?? 'Unknown';
-    final actions  = List<String>.from(result['actions'] ?? []);
-    final info     = result['info'] as String?;
-    final risk     = RiskLevel.fromString(riskStr);
-
+    // final condition = result['condition'] as String? ?? 'Unknown';
+    // final riskStr  = result['risk'] as String? ?? 'Unknown';
+    // final actions  = List<String>.from(result['actions'] ?? []);
+    // final info     = result['info'] as String?;
+    // final risk     = RiskLevel.fromString(riskStr);
+   final condition = result.possibleCondition;
+final risk      = result.riskLevel;
+final actions   = result.recommendedActions;
+final info      = result.additionalInfo;
     return Scaffold(
       backgroundColor: AppColors.scaffoldBg,
       appBar: AppBar(

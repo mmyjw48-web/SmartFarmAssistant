@@ -113,7 +113,7 @@ class SymptomCheckboxTile extends StatelessWidget {
             Text(
               symptom.label,
               style: TextStyle(
-                fontSize: 14,
+                fontSize: 12,
                 fontWeight:
                     isSelected ? FontWeight.w600 : FontWeight.normal,
                 color: isSelected

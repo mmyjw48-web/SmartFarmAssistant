@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:smart_farm_assistant/features/livestock/models/livestock_model.dart';
 
 // ── Screen imports (will be created in later phases) ──────────────
 // Onboarding
@@ -128,8 +129,16 @@ final GoRouter appRouter = GoRouter(
       name: 'diagnosisResult',
       builder: (context, state) {
         // Pass the AI result map as extra
-        final result = state.extra as Map<String, dynamic>?;
-        return DiagnosisResultScreen(result: result ?? {});
+        
+        // final result = state.extra as Map<String, dynamic>?;
+        // return DiagnosisResultScreen(result: result ?? {});
+
+        final result = state.extra;
+        if (result is DiagnosisResult) {
+  return DiagnosisResultScreen(result: result);
+} else {
+  return DiagnosisResultScreen(result: DiagnosisResult.error());
+}
       },
     ),
 

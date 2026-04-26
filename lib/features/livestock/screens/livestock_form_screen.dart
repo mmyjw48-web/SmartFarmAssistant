@@ -129,12 +129,13 @@ class LivestockFormScreen extends ConsumerWidget {
     if (result != null && context.mounted) {
       context.push(
         AppRoutes.diagnosisResult,
-        extra: {
-          'condition': result.possibleCondition,
-          'risk': result.riskLevel.label,
-          'actions': result.recommendedActions,
-          'info': result.additionalInfo,
-        },
+        // extra: {
+        //   'condition': result.possibleCondition,
+        //   'risk': result.riskLevel.label,
+        //   'actions': result.recommendedActions,
+        //   'info': result.additionalInfo,
+        // },
+        extra: result,
       );
     }
   }
@@ -201,6 +202,7 @@ class _SymptomsGrid extends StatelessWidget {
           isSelected: selected.contains(symptom),
           onToggle: () => onToggle(symptom),
         );
+        
       },
     );
   }

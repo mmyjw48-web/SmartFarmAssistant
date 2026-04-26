@@ -171,8 +171,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             // Raised circle with shadow
             AnimatedContainer(
               duration: const Duration(milliseconds: 200),
-              width: 52,
-              height: 52,
+              width: 45,
+              height: 45,
               decoration: BoxDecoration(
                 color: isActive ? AppColors.primary : AppColors.primaryLight,
                 shape: BoxShape.circle,

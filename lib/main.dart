@@ -14,7 +14,7 @@ void main() async {
   // Lock orientation to portrait (farming app is portrait-first)
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
+    DeviceOrientation.portraitDown, 
   ]);
 
   // Set system UI overlay style (status bar)
@@ -29,7 +29,6 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-
   runApp(
     // ProviderScope is required for Riverpod to work
     const ProviderScope(
