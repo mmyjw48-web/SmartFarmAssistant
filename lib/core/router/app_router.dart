@@ -30,18 +30,18 @@ import '../../features/profile/screens/profile_screen.dart';
 class AppRoutes {
   AppRoutes._();
 
-  static const String splash          = '/';
-  static const String welcome         = '/welcome';
-  static const String onboarding      = '/onboarding';
-  static const String login           = '/login';
-  static const String register        = '/register';
-  static const String home            = '/home';
-  static const String livestockForm   = '/livestock/form';
+  static const String splash = '/';
+  static const String welcome = '/welcome';
+  static const String onboarding = '/onboarding';
+  static const String login = '/login';
+  static const String register = '/register';
+  static const String home = '/home';
+  static const String livestockForm = '/livestock/form';
   static const String diagnosisResult = '/livestock/result';
-  static const String cropInput       = '/crops/input';
-  static const String cropResult      = '/crops/result';
-  static const String chat            = '/chat';
-  static const String profile         = '/profile';
+  static const String cropInput = '/crops/input';
+  static const String cropResult = '/crops/result';
+  static const String chat = '/chat';
+  static const String profile = '/profile';
 }
 
 /// App router singleton.
@@ -104,6 +104,9 @@ final GoRouter appRouter = GoRouter(
       path: AppRoutes.login,
       name: 'login',
       builder: (context, state) => const LoginScreen(),
+      // path: AppRoutes.login,
+      // name: 'login',
+      // builder: (context, state) => const HomeScreen(),
     ),
     GoRoute(
       path: AppRoutes.register,
@@ -129,16 +132,16 @@ final GoRouter appRouter = GoRouter(
       name: 'diagnosisResult',
       builder: (context, state) {
         // Pass the AI result map as extra
-        
+
         // final result = state.extra as Map<String, dynamic>?;
         // return DiagnosisResultScreen(result: result ?? {});
 
         final result = state.extra;
         if (result is DiagnosisResult) {
-  return DiagnosisResultScreen(result: result);
-} else {
-  return DiagnosisResultScreen(result: DiagnosisResult.error());
-}
+          return DiagnosisResultScreen(result: result);
+        } else {
+          return DiagnosisResultScreen(result: DiagnosisResult.error());
+        }
       },
     ),
 
