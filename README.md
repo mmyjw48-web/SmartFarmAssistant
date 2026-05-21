@@ -70,16 +70,11 @@ This project contributes to:
 
 ---
 
-## 👨‍💻 Team
-- Project Name: Smart Farm Assistant  
-- Team: [Your Team Name]  
 
----
 
 ## 📎 Demo
-(Add screenshots or demo video here)
+(https://youtu.be/g-bY3P3jdwk?si=ub3vboKPZf0DJk5E)
+( https://vt.tiktok.com/ZSxAN2cMs/ )
 
 ---
 
-## 📌 Note
-This project is built as part of an innovation competition and aims to provide practical AI solutions for agriculture.
